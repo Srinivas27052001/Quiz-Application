@@ -24,9 +24,13 @@ export default function Trivia({
 
 
     useEffect(()=>{
+
+      if(questionNumber-1===data.length){
+        setStop(true)
+      }
       setQuestion(data[questionNumber-1]);
 
-    },[data,questionNumber]);
+    },[data,questionNumber,setStop]);
 
     const delay=(duration,callback)=>{
       setTimeout(() => {

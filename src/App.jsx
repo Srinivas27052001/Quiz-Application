@@ -10,9 +10,13 @@ function App() {
   const[username,setUsername]=useState(null);
   const[questionNumber,setQuestionNumber]=useState(1)
   const[stop,setStop]=useState(false)
-  const[earned,setEarned]=useState("$ 0")
+  const[earned,setEarned]=useState("₹ 0")
 
     
+  const quit = () => {
+       setStop(true);
+  };
+
   const data = [
     {
       id: 1,
@@ -391,8 +395,8 @@ function App() {
     ): (
          <>
           <div className='main'>
-        {stop?
-        <h1 className='endText'>You Earned:{earned}</h1>:(
+        {stop?questionNumber-1===data.length?(<div className='winner'><div className='con'>🏆Congratulations</div><div className='erning'>You Earned:{earned}</div></div>):
+        (<h1 className='endText'>You Earned:{earned}</h1>):(
           <>
         <div className='top'>
           <div className='timer'>
@@ -410,9 +414,23 @@ function App() {
             </>  
     )}
       </div>
-   
+    
+         
+    
+     <div className='st'>
+      {/* <span className='text-bold'>Name:{username}</span> */}
+      <span className='name'> <b>Name: {username}</b></span>
+
+     <button className="star" onClick={quit}>
+        Quit
+      </button>
+      
+
 
       <div className='pyramid'>
+        
+   
+      
       <ul className='moneylist'>
         {moneypyramid.map((m)=>(
             <li className={questionNumber===m.id? "moneylistItem active":"moneylistItem"} >
@@ -425,6 +443,8 @@ function App() {
        
       </ul>
       </div>
+      </div>
+
          </>
 
       )}

@@ -112,13 +112,6 @@
   }
 }
 
-.pyramid{
-  width: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .moneylist{
   list-style: none;
   width: 100%;
@@ -193,3 +186,62 @@
   font-size: 18px;
   font-weight: 500;
 }
+.winner{
+  position: relative;
+  margin: auto;
+  width: 45%;
+  height: 15%;
+  text-align: center;
+  font-size: 30px;
+  background: linear-gradient(90deg,#061161 0%,#000000 50%,#061161 100%);
+  padding: 20px 20px;
+  border-radius: 50%;
+  border: 5px solid #ffa800;
+  font-weight: bold;
+}
+
+.erning{
+  /* background-color: #ffa800; */
+  color: #ffa800;
+}
+
+.pyramid{
+  /* width: 25%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.st{
+  width: 25%;
+  padding-top: 30px;
+
+}
+
+.star{
+  width: 30%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left:50px ;
+
+}
+
+.name{
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 20px;
+
+}
+
+
+
+
+
+
+
+

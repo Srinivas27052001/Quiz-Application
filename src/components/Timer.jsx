@@ -12,7 +12,7 @@ export default function Timer({ setStop, questionNumber }) {
   }, [setStop, timer]);
 
   useEffect(() => {
-    setTimer(30);
+     questionNumber<=7? setTimer(30):setTimer(60);
   }, [questionNumber]);
   return timer;
 }
